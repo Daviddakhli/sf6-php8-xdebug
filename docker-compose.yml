@@ -1,0 +1,30 @@
+version: '3.7'
+services:
+
+    # PHP service
+    sf8-php8:
+        container_name: sf8-php8
+        build: .
+        ports:
+            - "9001:8000"
+        volumes:
+            - ./project:/var/www
+
+    # MySQL database service
+    mysql:
+        image: mysql:8.0.19
+        container_name: 'sf8_mysql'
+        environment:
+            - MYSQL_DATABASE=${MYSQL_DATABASE}
+            - MYSQL_USER=${MYSQL_USER}
+            - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+            - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+        volumes:
+            - mysql_volume:/var/lib/mysql
+        ports:
+            - 3306:3306
+        env_file:
+            - ./.env
+
+volumes:
+  mysql_volume:
