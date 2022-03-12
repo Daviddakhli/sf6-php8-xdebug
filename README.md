@@ -1,5 +1,5 @@
 
-# Symfony 6 + PHP 8.0.13 + xdebug with Docker
+# Symfony 6 + PHP 8 + Mysql 8 + xdebug with Docker
 
 ## Run Locally
 
