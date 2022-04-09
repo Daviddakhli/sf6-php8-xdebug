@@ -6,7 +6,7 @@
 Clone the project
 
 ```bash
-  git@github.com:Daviddakhli/sf6-php8-xdebug.git
+  git@github.com:kdakhli/sf6-php8-xdebug.git
 ```
 
 Run the docker-compose
